@@ -12,7 +12,11 @@ const SignUpPage = () => {
   const { fontSize, fontSizeHandler } = useFontSize()
   return (
     <>
-      <section className="form-wrapper" style={fontSize ? { fontSize: `${fontSize}px` } : {}}>
+      <section
+        data-testid="form-wrapper"
+        className="form-wrapper"
+        style={fontSize ? { fontSize: `${fontSize}px` } : {}}
+      >
         <SignUpForm state={state} changeHandler={changeHandler} modalHandler={modalHandler} onSubmit={onSubmit} />
         <Footer />
       </section>
