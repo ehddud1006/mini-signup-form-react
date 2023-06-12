@@ -67,9 +67,14 @@ export const useAuthenticateForm = () => {
     return isValid
   }
 
+  const isAllRequirementSatisfy = () =>
+    validationHandler('id') === true && validationHandler('pw') === true && validationHandler('pw-check') === true
+
   const onSubmit = (event, callback) => {
     event.preventDefault()
-    callback()
+    if (isAllRequirementSatisfy()) {
+      callback()
+    }
   }
 
   return {
