@@ -19,7 +19,7 @@ const Input = (props) => {
           type={type}
           {...rest}
         />
-        <div id={infoText[id]} className="mt-1 mb-3 text-xs text-red-500">
+        <div data-testid={`signup-${id}-message`} id={infoText[id]} className="mt-1 mb-3 text-xs text-red-500">
           {message}
         </div>
       </div>

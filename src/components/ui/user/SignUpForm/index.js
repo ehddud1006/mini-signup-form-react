@@ -29,6 +29,7 @@ const SignUpForm = (props) => {
         message={idMsg}
       />
       <Input
+        data-testid="signup-pw"
         label="비밀번호"
         id="pw"
         type="password"
@@ -40,6 +41,7 @@ const SignUpForm = (props) => {
         message={pwMsg}
       />
       <Input
+        data-testid="signup-pw-check"
         label="비밀번호 확인"
         id="pw-check"
         type="password"
@@ -53,6 +55,7 @@ const SignUpForm = (props) => {
 
       <div className="flex items-center justify-center">
         <input
+          data-testid="signup-sumbit"
           id="submit"
           type="submit"
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:bg-gray-500"
