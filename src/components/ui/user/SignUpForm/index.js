@@ -17,6 +17,7 @@ const SignUpForm = (props) => {
       onSubmit={(event) => onSubmit(event, openModal)}
     >
       <Input
+        data-testid="signup-id"
         label="아이디"
         id="id"
         type="text"
