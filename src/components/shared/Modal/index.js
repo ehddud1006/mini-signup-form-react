@@ -32,6 +32,7 @@ const Modal = forwardRef((props, ref) => {
             취소하기
           </Button>
           <Button
+            data-testid="signup-modal-confirm"
             color="blue"
             onClick={() => {
               alert('가입되었습니다 🥳 ')
