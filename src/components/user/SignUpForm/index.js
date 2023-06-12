@@ -8,7 +8,7 @@ const SignUpForm = () => {
       className="w-full max-w-md m-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
       autoComplete="off"
     >
-      <Input label="아이디" id="id" type="text" placeholder="아이디를 입력해주세요." />
+      <Input label="아이디" id="id" type="text" placeholder="아이디를 입력해주세요." autoFocus />
       <Input label="비밀번호" id="pw" type="password" placeholder="비밀번호를 입력해주세요." autoComplete="off" />
       <Input
         label="비밀번호 확인"
