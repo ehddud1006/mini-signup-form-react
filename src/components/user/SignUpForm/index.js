@@ -3,7 +3,7 @@ import Input from '../../shared/Input'
 
 const SignUpForm = (props) => {
   const {
-    state: { id, pw, pwCheck },
+    state: { id, pw, pwCheck, idMsg, pwMsg, pwCheckMsg },
     changeHandler: { onChangeId, onChangePw, onChangePwCheck, validationHandler },
   } = props
 
@@ -22,6 +22,7 @@ const SignUpForm = (props) => {
         value={id}
         onChange={onChangeId}
         onBlur={() => validationHandler('id')}
+        message={idMsg}
       />
       <Input
         label="비밀번호"
@@ -32,6 +33,7 @@ const SignUpForm = (props) => {
         value={pw}
         onChange={onChangePw}
         onBlur={() => validationHandler('pw')}
+        message={pwMsg}
       />
       <Input
         label="비밀번호 확인"
@@ -42,6 +44,7 @@ const SignUpForm = (props) => {
         value={pwCheck}
         onChange={onChangePwCheck}
         onBlur={() => validationHandler('pw-check')}
+        message={pwCheckMsg}
       />
 
       <div className="flex items-center justify-center">
