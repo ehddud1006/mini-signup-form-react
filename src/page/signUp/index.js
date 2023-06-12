@@ -1,12 +1,14 @@
 import React from 'react'
 import SignUpForm from '../../components/user/SignUpForm'
 import Footer from '../../components/shared/Footer'
+import { useAuthenticateForm } from '../../hook/ui/user/useAuthenticateForm'
 
 const SignUpPage = () => {
+  const { state, changeHandler } = useAuthenticateForm()
   return (
     <>
       <section className="form-wrapper">
-        <SignUpForm />
+        <SignUpForm state={state} changeHandler={changeHandler} />
         <Footer />
       </section>
       <aside id="font-control-box" className="flex fixed bottom-0 right-0">
