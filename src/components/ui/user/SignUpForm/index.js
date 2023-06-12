@@ -1,10 +1,12 @@
 import React from 'react'
-import Input from '../../shared/Input'
+import Input from '../../../shared/Input'
 
 const SignUpForm = (props) => {
   const {
     state: { id, pw, pwCheck, idMsg, pwMsg, pwCheckMsg },
     changeHandler: { onChangeId, onChangePw, onChangePwCheck, validationHandler },
+    modalHandler: { openModal },
+    onSubmit,
   } = props
 
   return (
@@ -12,6 +14,7 @@ const SignUpForm = (props) => {
       id="form"
       className="w-full max-w-md m-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
       autoComplete="off"
+      onSubmit={(event) => onSubmit(event, openModal)}
     >
       <Input
         label="아이디"

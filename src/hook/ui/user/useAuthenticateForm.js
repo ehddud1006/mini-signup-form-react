@@ -67,6 +67,11 @@ export const useAuthenticateForm = () => {
     return isValid
   }
 
+  const onSubmit = (event, callback) => {
+    event.preventDefault()
+    callback()
+  }
+
   return {
     state: {
       id,
@@ -82,5 +87,6 @@ export const useAuthenticateForm = () => {
       onChangePwCheck,
       validationHandler,
     },
+    onSubmit,
   }
 }
